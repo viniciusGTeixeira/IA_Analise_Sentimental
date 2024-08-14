@@ -23,6 +23,17 @@ Este projeto utiliza aprendizado de máquina para detectar emoções faciais em 
     pip freeze > requirements.txt
     ```
 
+3. **Arquivos Grandes**: Alguns arquivos, como bibliotecas e pacotes, podem ser grandes e não devem ser versionados no Git. Para garantir que seu ambiente de desenvolvimento esteja corretamente configurado, você pode precisar instalar as seguintes dependências:
+
+    - **TensorFlow**: Arquivo `libtensorflow_cc.2.dylib` é muito grande e deve ser instalado via pip.
+    - **NumPy**: Arquivo `libopenblas64_.0.dylib` pode ser instalado via pip.
+    - **OpenCV**: Arquivo `cv2.abi3.so` deve ser instalado via pip.
+    - **Clang**: Arquivo `libclang.dylib` deve ser instalado via pip.
+
+    Certifique-se de instalar essas bibliotecas através do ambiente virtual e não incluí-las no repositório Git.
+
+4. **Git LFS**: Se você precisar versionar arquivos grandes, considere usar Git Large File Storage (LFS). Mais informações estão disponíveis em [Git LFS](https://git-lfs.github.com).
+
 ## Como Executar o Projeto
 
 1. **Treinar o Modelo**: Execute o script `train_model.py` para treinar o modelo de detecção de emoções:
@@ -45,11 +56,9 @@ Este projeto utiliza aprendizado de máquina para detectar emoções faciais em 
 
 - **Pasta `emotion_env/`**: Esta pasta contém o ambiente virtual e não deve ser versionada. Crie o ambiente virtual e instale as dependências conforme indicado acima.
 
-- **Arquivos Grandes**: Alguns arquivos, como bibliotecas e pacotes, podem ser grandes e não devem ser versionados. Esses arquivos devem ser instalados através do ambiente virtual e não adicionados ao repositório Git.
-
-- **Git LFS**: Se você precisar versionar arquivos grandes, considere usar Git Large File Storage (LFS). Mais informações estão disponíveis em [Git LFS](https://git-lfs.github.com).
+- **Arquivos Grandes**: Certifique-se de que arquivos grandes, como bibliotecas e pacotes, são instalados através do ambiente virtual e não são adicionados ao repositório Git.
 
 ## Licença
 
-Este projeto está licenciado sob a MIT License. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está licenciado sob a [Licença Não Comercial](LICENSE). Apenas pessoas autorizadas podem acessar e utilizar o código fonte. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
