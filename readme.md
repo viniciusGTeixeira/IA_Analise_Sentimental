@@ -32,8 +32,6 @@ Este projeto utiliza aprendizado de máquina para detectar emoções faciais em 
 
     Certifique-se de instalar essas bibliotecas através do ambiente virtual e não incluí-las no repositório Git.
 
-4. **Git LFS**: Se você precisar versionar arquivos grandes, considere usar Git Large File Storage (LFS). Mais informações estão disponíveis em [Git LFS](https://git-lfs.github.com).
-
 ## Como Executar o Projeto
 
 1. **Treinar o Modelo**: Execute o script `train_model.py` para treinar o modelo de detecção de emoções:
