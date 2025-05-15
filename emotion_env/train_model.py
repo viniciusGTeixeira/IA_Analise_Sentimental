@@ -3,8 +3,6 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from tensorflow.keras import layers, models
 import matplotlib.pyplot as plt
 
-# Diretório onde o dataset fer2013 está armazenado
-# Você pode baixar o dataset fer2013 de https://www.kaggle.com/msambare/fer2013
 train_dir = 'data/train'
 val_dir = 'data/test'
 
@@ -64,10 +62,9 @@ history = model.fit(
     epochs=50
 )
 
-# Salvando o modelo
+# Salva o modelo
 model.save('emotion_detection_model.h5')
 
-# Plotando o resultado do treinamento
 plt.plot(history.history['accuracy'], label='Acurácia Treinamento')
 plt.plot(history.history['val_accuracy'], label='Acurácia Validação')
 plt.xlabel('Épocas')
